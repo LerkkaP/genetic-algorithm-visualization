@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+import seaborn as sns
 
 def rastrigin_2D(X, A=10):
     return A*2 + np.sum(X**2 - A*np.cos(2*np.pi*X), axis=-1)
@@ -54,9 +55,11 @@ for gen in range(max_generations):
 final_fitness_values = fitness(population)
 best_index = np.argmax(final_fitness_values)
 best_individual = population[best_index]
+
 print("Best individual (x1, x2):", best_individual)
 print("Negated fitness:", final_fitness_values[best_index])
 print("Rastrigin value:", rastrigin_2D(best_individual.reshape(1,2))[0])
+print("Composing video...")
 
 fig, ax = plt.subplots(figsize=(8,6))
 contour = ax.contourf(X, Y, Z, levels=30, cmap="viridis")
