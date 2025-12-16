@@ -2,6 +2,8 @@
 
 The goal of this repository is to explore the basics of neuroevolution and genetic algorithms (GA). Specifically, it implements a GA to find the global minimum of the 2D Rastrigin function and visualizes the optimization process. The inspiration for this repository comes from Chapter **2.2.2, page 24** of the book [*"Neuroevolution: Harnessing Creativity in AI Agent Design"*](https://neuroevolutionbook.com/), an MIT Press Book by Sebastian Risi, Yujin Tang, David Ha, and Risto Miikkulainen, where an image of a GA process applied to the 2D Rastrigin function is shown.
 
+The video below shows one run of the implemented GA on rastrigin 2D function. The run seems to find a global minimum but the algorithm may as well get stuck in a local minima: the algorithm isn't currently fine-tuned for optimal performance. The current implementation doesn't have any stopping criteria which is why the algorithm runs over the predefined number of generations.
+
 
 https://github.com/user-attachments/assets/867a6451-d4e4-4d02-a4ac-c2778766db33
 
